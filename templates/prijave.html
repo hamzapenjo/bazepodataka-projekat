@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijave Dostavljača</title>
+</head>
+<body>
+    <h1>Prijave Dostavljača</h1>
+    <ul>
+        {% for prijava in prijave %}
+            <li>
+                Redni broj: {{ prijava.RedniBrojPrijave }}<br>
+                Dostavljač ID: {{ prijava.DostavljacID }}<br>
+                Datum i vrijeme prijave: {{ prijava.DatumVrijemePrijava }}<br>
+                Prijava/Odjava: {{ prijava.PrijavaOdjava }}
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logovi Vozila</title>
+</head>
+<body>
+        <h1>Logovi Vozila</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Log ID</th>
+                <th>Dostavljač ID</th>
+                <th>Vozilo ID</th>
+                <th>Zaduživanje</th>
+                <th>Razduživanje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logovi %}
+                <tr>
+                    <td>{{ log.LogVozilaID }}</td>
+                    <td>{{ log.DostavljacID }}</td>
+                    <td>{{ log.VoziloID }}</td>
+                    <td>{{ log.DatumVrijemeZaduzivanje }}</td>
+                    <td>{{ log.DatumVrijemeRazduzivanje }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

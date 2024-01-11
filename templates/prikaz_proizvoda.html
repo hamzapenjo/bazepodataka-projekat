@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svi Proizvodi</title>
+</head>
+<body>
+    <h1>Svi Proizvodi</h1>
+    <table>
+        <tr>
+            <th>Sifra</th>
+            <th>Naziv Proizvoda</th>
+            <th>Opis Proizvoda</th>
+        </tr>
+        {% for proizvod in proizvodi %}
+            <tr>
+                <td>{{ proizvod.Sifra }}</td>
+                <td>{{ proizvod.NazivProizvoda }}</td>
+                <td>{{ proizvod.OpisProizvoda }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

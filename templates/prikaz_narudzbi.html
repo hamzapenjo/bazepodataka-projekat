@@ -1,0 +1,32 @@
+<!-- prikaz_narudzbi.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prikaz Narudžbi</title>
+</head>
+<body>
+    <h1>Prikaz Narudžbi</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Datum</th>
+            <th>Ime i prezime</th>
+            <th>Adresa</th>
+            <th>Grad</th>
+            <th>Kontakt telefon</th>
+        </tr>
+        {% for narudzba in narudzbe %}
+            <tr>
+                <td>{{ narudzba.NarudzbeID }}</td>
+                <td>{{ narudzba.VrijemeNarudzbe }}</td>
+                <td>{{ narudzba.ImePrezime }}</td>
+                <td>{{ narudzba.Adresa }}</td>
+                <td>{{ narudzba.Grad }}</td>
+                <td>{{ narudzba.KontaktTelefon }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
